@@ -937,7 +937,10 @@
  * Override with M203
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 }
+// Z speed is borderline at F240, comfortable at F200 (mm/min). Use G1 to test.
+// Original Pangu/Melzi firmware had max_feedrate[] = {3000, 3000, 200, 10000} (mm/min)
+// But X and Y are fine at F18000.
+#define DEFAULT_MAX_FEEDRATE          { 300, 300, 3.3, 25 }
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -1017,7 +1020,7 @@
  *
  * See https://github.com/synthetos/TinyG/wiki/Jerk-Controlled-Motion-Explained
  */
-//#define S_CURVE_ACCELERATION
+#define S_CURVE_ACCELERATION
 
 //===========================================================================
 //============================= Z Probe Options =============================
@@ -1757,7 +1760,8 @@
 #endif
 
 // Homing speeds (mm/min)
-#define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (4*60) }
+// These values from the original Pangu/Melzi firmware.
+#define HOMING_FEEDRATE_MM_M { 1500, 1500, 200 }
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS
