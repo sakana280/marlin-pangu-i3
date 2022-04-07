@@ -930,7 +930,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 3200, 137.6475 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 3200, 171 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -939,8 +939,8 @@
  */
 // Z speed is borderline at F240, comfortable at F200 (mm/min). Use G1 to test.
 // Original Pangu/Melzi firmware had max_feedrate[] = {3000, 3000, 200, 10000} (mm/min)
-// But X and Y are fine at F18000.
-#define DEFAULT_MAX_FEEDRATE          { 300, 300, 3.3, 25 }
+// But X and Y are fine at F24000.
+#define DEFAULT_MAX_FEEDRATE          { 400, 400, 3.3, 1.3 }
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -1560,7 +1560,7 @@
  * these options to restore the prior leveling state or to always enable
  * leveling immediately after G28.
  */
-//#define RESTORE_LEVELING_AFTER_G28
+#define RESTORE_LEVELING_AFTER_G28
 //#define ENABLE_LEVELING_AFTER_G28
 
 /**
