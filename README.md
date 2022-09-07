@@ -1,3 +1,20 @@
+# Marlin 3D Printer Firmware for rp3d Pangu i3
+
+## About this Fork
+
+This fork is for the original [rp3d Pangu i3](https://rp3d.com/shop/fdm-diy-kits-c-1_23/pangu-i3-3d-printer-kit-based-on-prusa-i3-p-48.html) circa 2014.
+The Pangu i3 itself is based on the Prusa i3, but with some minor enhancements to the construction.
+This branch is currently based on the 2.0.x branch of Marlin. Yes it needs to be updated to the 2.1.x branch already!
+The original Pangu i3 firmware was based on a fork of the now-ancient [Sprinter Melzi](https://github.com/reprappro/Firmware/blob/master/Sprinter_Melzi) firmware.
+
+### Features enabled
+
+- Auto bed levelling (9-point linear, manual probing method)
+- Thermal protection
+- Tuned speed limit and acceleration ([linear advance](https://marlinfw.org/docs/features/lin_advance.html) and experimental S-curve)
+
+********************************************************************************
+
 # Marlin 3D Printer Firmware
 
 ![GitHub](https://img.shields.io/github/license/marlinfirmware/marlin.svg)
