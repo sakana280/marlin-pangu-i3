@@ -9,7 +9,7 @@ The original Pangu i3 firmware was based on a fork of the now-ancient [Sprinter 
 
 ### Features enabled
 
-- Auto bed levelling (9-point linear, manual probing method)
+- Auto bed levelling (9-point bilinear mesh, manual probing method)
 - Thermal protection
 - Tuned speed limit and acceleration ([linear advance](https://marlinfw.org/docs/features/lin_advance.html) and experimental S-curve)
 
